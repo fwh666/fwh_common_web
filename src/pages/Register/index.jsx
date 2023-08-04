@@ -25,11 +25,31 @@ export default function Register() {
         // console.log(event.target.value);
         
         //原始-可用调用
+        // data [{"id":"001","name":"tom","age":18},{"id":"002","name":"jerry","age":19},{"id":"003","name":"tony","age":120}]
         fetch('/api/students')
-        .then(respose=>respose.text())
+        // .then(respose=>respose.text())
+        .then(respose=>respose.json())
         .then((data)=>{
-            console.log('data',data);
+            console.log('data',data);    
+            data.forEach((i)=>{
+                console.log(i);
+            })
         })
+        
+        // fetch('/api/students')
+        // .then(response => response.json())
+        // .then(students => {
+        //     students.forEach((student) => {
+        //     console.log(student.name);
+        //     });
+        // });
+                
+        
+        // .then((data=[])=>{
+        //     data.map((obj)=>{
+        //         console.log(obj.name);
+        //     })
+        // })
         
 
 
