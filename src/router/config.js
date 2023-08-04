@@ -9,6 +9,7 @@ import About from "../pages/about/About";
 import Alipay from "../pages/pay/Alipay";
 import LoginPage from '../pages/Login/index.jsx';
 import Register from '../pages/Register/index.jsx';
+import DashBoard from '../pages/DashBoard/index.jsx';
 
 // 所有页面路由的映射路径
 export default [
@@ -40,6 +41,10 @@ export default [
         path:'/login',
         element:<LoginPage/>
     },
+    {
+        path:'/dashboard',
+        element:<DashBoard/>
+    },
     // 默认打开首页地址
     {
         path: '/',
@@ -48,7 +53,8 @@ export default [
         // element: <MyPage/>
         // element: <Product/>
         // element: <Buy/>
-        element:<LoginPage/>
+        // element:<LoginPage/>
         // element: <Register/>
+        element:<DashBoard/>
     }
 ]

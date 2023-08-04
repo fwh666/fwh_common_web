@@ -57,6 +57,7 @@ export default function Register() {
         setusername('')
         setpassword('')
         alert("注册成功")
+        navigate('/login')
     }
 
 

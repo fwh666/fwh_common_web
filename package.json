@@ -1,5 +1,5 @@
 {
-  "name": "fwh-pay-web",
+  "name": "fwh_common_web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

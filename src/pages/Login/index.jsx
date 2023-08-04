@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './index.css'
 import { NavLink,useNavigate } from 'react-router-dom'
-import { Form } from 'antd';
+import { Button, Form,Input } from 'antd';
 /**
  * 登录页面
  */
@@ -16,12 +16,14 @@ export default function LoginPage() {
   const [username, setusername] = useState('')
   const [password, setpassword] = useState('')
   
-  const handleSubmit=(event)=>{
+  const handleLogin=(event)=>{
      event.preventDefault();
      console.log('登录信息：',username,password);
      setusername('');
      setpassword('');
      alert("登录成功")
+     localStorage.setItem("token",true)
+     navigate('/dashboard')
   }
   
   return (
@@ -29,11 +31,12 @@ export default function LoginPage() {
       <div className='container'>
         <div className='form-container'>
           <h2>登录</h2>
-          <Form onSubmit={handleSubmit}>
-            <input className='form-group' type='email' value={username} onChange={(event)=>setusername(event.target.value)} placeholder='邮箱用户名'></input>
-            <input className='form-group' type='password' value={password} onChange={(event)=>setpassword(event.target.value)} placeholder='password'></input>
+          <form onSubmit={handleLogin}>
+            <Input className='form-group' type='text' value={username} onChange={(event)=>setusername(event.target.value)} placeholder='邮箱用户名'/>
+            <Input className='form-group' type='password' value={password} onChange={(event)=>setpassword(event.target.value)} placeholder='password'/>
             <button id='loginSubmitId' type='submit'>Login</button>
-          </Form>
+            {/* <Button type='primary'>登录</Button> */}
+          </form>
           <p>
             还没有账户吗? 
             <NavLink to='/register' onClick={jumpRegist}>开始注册</NavLink>
