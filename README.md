@@ -13,12 +13,16 @@
 - node : v14.17.6
 - npm : 6.14.15
 
-
+## Npm方式
 - npm i axios
 - npm i react-router-dom
 - npm i react-router-native
 - npm install antd@4.16.13 --save
 - npm install @craco/craco --save 
+
+## yarn方式
+- yarn
+- yarn start
 
 > 如果出现问题,重新安装.
 
