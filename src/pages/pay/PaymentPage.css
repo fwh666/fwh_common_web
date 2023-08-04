@@ -1,0 +1,35 @@
+.Payment {
+    width: 600px;
+    margin: 100px auto 0;
+}
+
+.redBall_wrap {
+    display: flex;
+    /* TODO-样式间距 */
+}
+
+.font_red {
+    color: red;
+}
+
+.QR_code {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    /*vertical-align: middle;*/
+    /*box-sizing: border-box;*/
+    /*overflow: clip;*/
+    /*overflow-clip-margin: content-box;*/
+    /*text-align: center !important;*/
+
+}
+
+.PayTip {
+    box-sizing: border-box;
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    margin: 0 auto;
+}

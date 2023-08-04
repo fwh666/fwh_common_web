@@ -1,0 +1,9 @@
+.App {
+    width: 600px;
+    margin: 100px auto 0;
+}
+
+.redBall_wrap {
+    display: flex;
+    /* TODO-样式间距 */
+}
