@@ -1,5 +1,6 @@
 import React, { useEffect ,useState} from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import User from '../User'
 
 /**
  * 1. 验证登录状态
@@ -21,6 +22,7 @@ export default function DashBoard() {
   return (
     <div>
         <h1>welcome hello</h1>
+        <User></User>
     </div>
   )
 }
