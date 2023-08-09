@@ -9,27 +9,14 @@ import { useLocation, useNavigate } from 'react-router-dom'
 export default function DashBoard() {
     const navigate=useNavigate()
     const location=useLocation()
-    const [isLogined, setisLogined] = useState(false)
+    // const [isLogined, setisLogined] = useState(false)
     useEffect(()=>{
         const token = localStorage.getItem("token")
         console.log('token',token);
-        
-        // if(null===token){
-        //     setisLogined(false)
-        // }else{
-        //     // server-token-effiect
-        //     setisLogined(true)
-        // }
-        setisLogined(true)
-        console.log('isLogined',isLogined);
-        if(!isLogined){
+        if(!token||null===token){
             navigate('/login')
         }
     },[location])
-    
-    // console.log('location',location);
-    // console.log('isLogined',isLogined);
-
 
   return (
     <div>
